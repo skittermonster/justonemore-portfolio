@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "brand": "JustOneMore",
+    "engineer": "Ethan Lum",
+    "role": "Audio Engineer & Sound Designer",
+    "bio": "Audio Engineering, DSP Tools, Sound Design & Music Production",
+    "sampleRate": "96.0 kHz / 24-bit Float",
+    "dspStatus": "ONLINE // READY",
+    "location": "Vancouver, BC",
+    "links": {
+      "github": "https://github.com/justonemore",
+      "email": "mailto:ethan@justonemore.audio",
+      "youtube": "https://youtube.com/@justonemore",
+      "soundcloud": "https://soundcloud.com/justonemore"
+    }
+  },
+  "vst_dsp": [
+    {
+      "id": "vst-saturnine",
+      "title": "Saturnine Tube Drive & Wavefolder",
+      "subtitle": "Asymmetric Polyphonic Distortion & Harmonic Saturator",
+      "description": "Custom dual-stage saturation plugin featuring tube triode emulation, diode clipping curves, and a West-Coast style folded wave shaper with oversampling anti-aliasing.",
+      "tags": ["JUCE 8", "C++", "DSP", "SIMD", "Oversampling 4x"],
+      "specs": [
+        "Iterative nonlinear solver with 4x polynomial anti-aliasing (Bilinear Transform)",
+        "Zero-latency DC-blocking Butterworth highpass filter stage",
+        "Dry/Wet parallel blend with automatic gain compensation (RMS matched)"
+      ],
+      "audioDryUrl": "",
+      "audioProcessedUrl": "",
+      "repoOrDownloadUrl": "https://github.com/justonemore/saturnine-vst",
+      "architecture": "VST3 / AU / CLAP (macOS & Windows)",
+      "version": "v1.4.2",
+      "synthPreset": "tube_drive"
+    },
+    {
+      "id": "vst-rvc-pipeline",
+      "title": "VocalMorph RVC Real-Time Voice Pipeline",
+      "subtitle": "Low-Latency Neural Voice Conversion & Formant Resynthesis",
+      "description": "Production-grade automated Python pipeline leveraging Retrieval-based Voice Conversion (RVC v2) with pitch extraction via Harvest/CREPE and real-time ASIO audio streaming.",
+      "tags": ["RVC v2", "Python", "PyTorch", "Voice Pipeline", "ASIO"],
+      "specs": [
+        "End-to-end roundtrip latency tuned under 18ms using PyTorch TorchScript JIT",
+        "Continuous f0 trajectory smoothing with intelligent de-jitter gate",
+        "Custom timbre feature index retrieval with dynamic nearest-neighbor blend"
+      ],
+      "audioDryUrl": "",
+      "audioProcessedUrl": "",
+      "repoOrDownloadUrl": "https://github.com/justonemore/vocalmorph-pipeline",
+      "architecture": "Python 3.11 / CUDA / C++ Wrapper",
+      "version": "v2.1.0",
+      "synthPreset": "vocal_morph"
+    },
+    {
+      "id": "vst-resocomb",
+      "title": "ResoComb Multi-Band Resonator",
+      "subtitle": "Tuned Delay Matrix & Physical Modeling Synthesizer",
+      "description": "Feedback comb filtering network capable of morphing static percussive noise bursts into metallic plates, strings, and tuned acoustic bodies with microtonal scale tuning.",
+      "tags": ["JUCE 8", "C++", "Physical Modeling", "WASM", "DSP"],
+      "specs": [
+        "8-voice fractional delay lines with Hermite polynomial interpolation",
+        "Integrated multi-pole damping damping filters inside the feedback loop",
+        "MIDI-mappable keyboard tracking for harmonic Karplus-Strong string synthesis"
+      ],
+      "audioDryUrl": "",
+      "audioProcessedUrl": "",
+      "repoOrDownloadUrl": "https://github.com/justonemore/resocomb-dsp",
+      "architecture": "VST3 / CLAP / WebAudio WASM",
+      "version": "v1.1.0",
+      "synthPreset": "reso_comb"
+    },
+    {
+      "id": "vst-stereoflux",
+      "title": "StereoFlux M/S Spatial Expander",
+      "subtitle": "Psychoacoustic Mid-Side Processor & Haas Delay",
+      "description": "Clean stereo bus width enhancer that maintains strict mono-compatibility. Combines frequency-split mid/side gain trim with cross-channel phase decorrelation.",
+      "tags": ["C++20", "Mid/Side", "Psychoacoustics", "JUCE 8"],
+      "specs": [
+        "Linear-phase crossover filter dividing Sub (mono-summed) and High-Band expansion",
+        "Integrated goniometer phase correlation metering (-1.0 to +1.0)",
+        "Zero phase-smearing stereo decorrelation kernel"
+      ],
+      "audioDryUrl": "",
+      "audioProcessedUrl": "",
+      "repoOrDownloadUrl": "https://github.com/justonemore/stereoflux",
+      "architecture": "VST3 / AU (64-bit float processing)",
+      "version": "v1.0.4",
+      "synthPreset": "stereo_flux"
+    }
+  ],
+  "sound_design": {
+    "projects": [
+      {
+        "id": "sd-apex-mech",
+        "title": "Apex Protocol: Mech Combat Sound Reel",
+        "description": "Complete sound redesign for a sci-fi bipedal mech encounter. Layered modular servo actuators, hydraulic hiss, heavy titanium footfalls, plasma cannon charges, and reactive damage stinger transients.",
+        "tags": ["Unreal Engine 5", "MetaSounds", "Synthesized SFX", "Foley", "Mix & Master"],
+        "videoUrl": "",
+        "thumbnailPlaceholder": "apex_mech",
+        "audioFullMixUrl": "",
+        "audioSfxOnlyUrl": "",
+        "clientOrContext": "Sci-Fi Game Demo Trailer",
+        "year": "2025"
+      },
+      {
+        "id": "sd-aethelgard-spells",
+        "title": "Aethelgard: Elemental Magic & Ambient Ecosystem",
+        "description": "Procedural magic cast audio assets and spatialized dynamic ambience. Designed using organic acoustic field recordings (ice cracking, fire torches, wind tunnels) combined with spectral granular synthesis.",
+        "tags": ["Unity", "Wwise", "Granular Synthesis", "Field Recording", "Dynamic Audio"],
+        "videoUrl": "",
+        "thumbnailPlaceholder": "aethelgard",
+        "audioFullMixUrl": "",
+        "audioSfxOnlyUrl": "",
+        "clientOrContext": "Fantasy Action RPG",
+        "year": "2024"
+      },
+      {
+        "id": "sd-cyber-chase",
+        "title": "Overdrive 2088: 3D Animation Cinematic Short",
+        "description": "Linear cinematic audio overhaul for a high-speed cyberpunk hoverbike pursuit. Features Doppler-shifted turbine roars, pneumatic brake squeals, sub-bass pulse impacts, and holographic HUD telemetry beeps.",
+        "tags": ["Blender 3D", "Cinematic Mix", "Doppler Modeling", "Sub-Bass Foley"],
+        "videoUrl": "",
+        "thumbnailPlaceholder": "cyber_chase",
+        "audioFullMixUrl": "",
+        "audioSfxOnlyUrl": "",
+        "clientOrContext": "Student Academy Showcase Short",
+        "year": "2024"
+      }
+    ],
+    "soundboardPads": [
+      {
+        "id": "pad-chime",
+        "label": "UI CHIME",
+        "category": "INTERFACE",
+        "audioUrl": "",
+        "synthType": "chime",
+        "hotkey": "1"
+      },
+      {
+        "id": "pad-sub",
+        "label": "SUB DROP",
+        "category": "BASS",
+        "audioUrl": "",
+        "synthType": "sub_drop",
+        "hotkey": "2"
+      },
+      {
+        "id": "pad-laser",
+        "label": "LASER BLASTER",
+        "category": "WEAPON",
+        "audioUrl": "",
+        "synthType": "laser",
+        "hotkey": "3"
+      },
+      {
+        "id": "pad-impact",
+        "label": "IMPACT SLAM",
+        "category": "PHYSICS",
+        "audioUrl": "",
+        "synthType": "impact",
+        "hotkey": "4"
+      },
+      {
+        "id": "pad-step",
+        "label": "FOLEY STEP",
+        "category": "FOLEY",
+        "audioUrl": "",
+        "synthType": "footstep",
+        "hotkey": "5"
+      },
+      {
+        "id": "pad-riser",
+        "label": "SYNTH RISER",
+        "category": "TRANSITION",
+        "audioUrl": "",
+        "synthType": "riser",
+        "hotkey": "6"
+      },
+      {
+        "id": "pad-glitch",
+        "label": "GLITCH ZAP",
+        "category": "DIGITAL",
+        "audioUrl": "",
+        "synthType": "glitch",
+        "hotkey": "7"
+      },
+      {
+        "id": "pad-clang",
+        "label": "METAL CLANG",
+        "category": "METALLIC",
+        "audioUrl": "",
+        "synthType": "clang",
+        "hotkey": "8"
+      },
+      {
+        "id": "pad-beep",
+        "label": "HUD TELEMETRY",
+        "category": "SYSTEM",
+        "audioUrl": "",
+        "synthType": "beep",
+        "hotkey": "9"
+      }
+    ]
+  },
+  "music": [
+    {
+      "id": "trk-neon-horizon",
+      "title": "Neon Horizon (feat. Solaria SynthV)",
+      "role": "Producer / Vocal Synth Programmer / Mixing & Mastering",
+      "tags": ["FL Studio", "Synthesizer V", "Cyberpunk", "Electronic", "Vocal Tuning"],
+      "bpm": 128,
+      "lufs": "-14.0 LUFS",
+      "duration": "3:24",
+      "durationSeconds": 204,
+      "audioUrl": "",
+      "markers": [
+        { "label": "Intro", "time": 0 },
+        { "label": "Verse", "time": 18 },
+        { "label": "Build", "time": 48 },
+        { "label": "Drop", "time": 64 },
+        { "label": "Bridge", "time": 128 },
+        { "label": "Outro", "time": 180 }
+      ]
+    },
+    {
+      "id": "trk-chrono-shift",
+      "title": "Chrono Shift (Original Glitch Mix)",
+      "role": "Composer / Sound Designer / Modular Synthesist",
+      "tags": ["FL Studio", "Glitch Hop", "Modular Synth", "Sound Design", "Drum Programming"],
+      "bpm": 110,
+      "lufs": "-11.5 LUFS",
+      "duration": "2:42",
+      "durationSeconds": 162,
+      "audioUrl": "",
+      "markers": [
+        { "label": "Intro Beat", "time": 0 },
+        { "label": "Glitch Groove", "time": 22 },
+        { "label": "Half-Time Drop", "time": 56 },
+        { "label": "Melodic Breakdown", "time": 105 },
+        { "label": "Final Stutter", "time": 132 }
+      ]
+    },
+    {
+      "id": "trk-ephemeral-drift",
+      "title": "Ephemeral Drift (Hatsune Miku English)",
+      "role": "Producer / Vocaloid Tuning / Mix Engineer",
+      "tags": ["FL Studio", "Vocaloid", "Future Bass", "Sidechain", "Pitch Editing"],
+      "bpm": 150,
+      "lufs": "-13.2 LUFS",
+      "duration": "3:36",
+      "durationSeconds": 216,
+      "audioUrl": "",
+      "markers": [
+        { "label": "Chime Intro", "time": 0 },
+        { "label": "Miku Verse", "time": 16 },
+        { "label": "Snare Build", "time": 44 },
+        { "label": "Future Drop", "time": 60 },
+        { "label": "Piano Solo", "time": 120 },
+        { "label": "Climax", "time": 168 }
+      ]
+    },
+    {
+      "id": "trk-overclocked",
+      "title": "Overclocked Sub-Routine",
+      "role": "Composer / Heavy Synthesizer Sound Design / Mastering",
+      "tags": ["FL Studio", "Midtempo Bass", "Distortion DSP", "Industrial", "140 BPM"],
+      "bpm": 140,
+      "lufs": "-9.8 LUFS",
+      "duration": "2:58",
+      "durationSeconds": 178,
+      "audioUrl": "",
+      "markers": [
+        { "label": "Sub Intro", "time": 0 },
+        { "label": "Drive Riff", "time": 34 },
+        { "label": "Overdrive Drop", "time": 68 },
+        { "label": "Granular Break", "time": 116 },
+        { "label": "Heavy Outro", "time": 144 }
+      ]
+    }
+  ]
+}
