@@ -32,6 +32,11 @@ jobs:
 
       - name: Build static export
         run: npm run build
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Ensure .nojekyll exists
+        run: touch ./out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
